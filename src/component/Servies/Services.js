@@ -13,7 +13,7 @@ const Services = () => {
   }, []);
   const naxaServices = useSelector((state) => {
     return state.services;
-  }).sort((a, b) => a.id - b.id);
+  }).sort((a, b) => a.service_order - b.service_order);
 
   return (
     <Layout>
