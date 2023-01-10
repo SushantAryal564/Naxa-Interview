@@ -14,7 +14,11 @@ const Services = () => {
   });
   console.log(naxaServices);
 
-  return <div></div>;
+  return (
+    <div>
+      <div className="px-4 mx-auto"> Hi My name is sushant Aryal</div>
+    </div>
+  );
 };
 
 export default Services;
