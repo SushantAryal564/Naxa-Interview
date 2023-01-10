@@ -4,7 +4,7 @@ import { serviesData } from "./servicesReducer";
 import ServiesSaga from "./servicesSaga";
 const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
-  reducer: { servies: serviesData },
+  reducer: { services: serviesData },
   middleware: () => [sagaMiddleware],
 });
 sagaMiddleware.run(ServiesSaga);
