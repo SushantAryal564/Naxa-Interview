@@ -1,4 +1,4 @@
-import Services from "./component/pages/Services";
+import Services from "./component/Servies/Services";
 
 function App() {
   return <Services />;
