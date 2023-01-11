@@ -1,7 +1,11 @@
 import Services from "./component/Servies/Services";
-import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 function App() {
-  return <Services />;
+  return (
+    <Routes>
+      <Route path="/" element={<Services />} />
+    </Routes>
+  );
 }
 
 export default App;
