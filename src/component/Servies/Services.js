@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { servicesAction } from "../../store/servicesAction";
 import Layout from "../Layout/layout";
 import Service from "./Service";
+import { MainNavigation } from "../Layout/MainNavigation";
 
 const Services = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ const Services = () => {
   return (
     <Layout>
       <section className="banner service-banner md-banner xxl: h-[520px] bg-heroBackground bg-no-repeat bg-contain	bg-right bg-[#fff] relative">
+        <MainNavigation />
         <div className="flex justify-center items-center h-full w-full absolute inset-x-0 bottom-0 top-[30px] xxl:top-[45px] ">
           <div className="max-w-[90%] w-full px-[15px] mx-auto">
             <div className="max-w-[78%]">
