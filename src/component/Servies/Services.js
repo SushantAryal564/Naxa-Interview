@@ -11,16 +11,19 @@ const Services = () => {
   useEffect(() => {
     dispatch(servicesAction());
   }, []);
+
   const naxaServices = useSelector((state) => {
     return state.services;
   }).sort((a, b) => a.service_order - b.service_order);
 
+  let naxaServicesTitle = [];
+  naxaServices.forEach((element) => {
+    let title = element.title;
+    naxaServicesTitle.push(title);
+  });
   return (
     <Layout>
-      <section
-        className="banner service-banner md-banner xxl: h-[520px] bg-heroBackground bg-no-repeat bg-contain	bg-right bg-[#fff] relative"
-        // className='background: url("/5f2e7ab4fc673af02b45eed51bf5cb5e.jpg");'
-      >
+      <section className="banner service-banner md-banner xxl: h-[520px] bg-heroBackground bg-no-repeat bg-contain	bg-right bg-[#fff] relative">
         <div className="flex justify-center items-center h-full w-full absolute inset-x-0 bottom-0 top-[30px] xxl:top-[45px] ">
           <div className="max-w-[90%] w-full px-[15px] mx-auto">
             <div className="max-w-[78%]">
@@ -39,6 +42,13 @@ const Services = () => {
                 find the best fitting solutions to local problems.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="w-full absolute flex justify-center bottom-[-30px]">
+          <div className=" max-w-[90%] flex justify-between border shadow-lg bg-white gap-2 p-1">
+            {naxaServicesTitle.map((element) => {
+              return <div className="w-[13%] self-center">{element}</div>;
+            })}
           </div>
         </div>
       </section>

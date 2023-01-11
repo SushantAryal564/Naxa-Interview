@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 const Service = ({ data }) => {
   const ordering = data.service_order % 2 === 0;
-  console.log(data);
   const isIcon = data.icon.includes(".svg");
   return (
     <div className="max-w-[90%] w-full px-4 mx-auto ">
