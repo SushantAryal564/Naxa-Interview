@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Naxa-Interview/static/css/main.15bbe9b6.css",
-    "main.js": "/Naxa-Interview/static/js/main.08141757.js",
+    "main.js": "/Naxa-Interview/static/js/main.c5ee6f07.js",
     "static/js/787.4a2eed4b.chunk.js": "/Naxa-Interview/static/js/787.4a2eed4b.chunk.js",
     "index.html": "/Naxa-Interview/index.html",
     "main.15bbe9b6.css.map": "/Naxa-Interview/static/css/main.15bbe9b6.css.map",
-    "main.08141757.js.map": "/Naxa-Interview/static/js/main.08141757.js.map",
+    "main.c5ee6f07.js.map": "/Naxa-Interview/static/js/main.c5ee6f07.js.map",
     "787.4a2eed4b.chunk.js.map": "/Naxa-Interview/static/js/787.4a2eed4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.15bbe9b6.css",
-    "static/js/main.08141757.js"
+    "static/js/main.c5ee6f07.js"
   ]
 }
