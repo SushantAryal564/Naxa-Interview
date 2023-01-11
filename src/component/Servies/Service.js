@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-const Service = ({ data }) => {
+const Service = ({ data, ref }) => {
   const ordering = data.service_order % 2 === 0;
   const isIcon = data.icon.includes(".svg");
   return (
@@ -10,7 +10,10 @@ const Service = ({ data }) => {
         >
           {!ordering ? (
             <Fragment>
-              <div className="max-w-[50%] justify-self-center px-[15px]">
+              <div
+                className="max-w-[50%] justify-self-center px-[15px]"
+                id={data.title}
+              >
                 <figure className="h-full flex items-center justify-center mb-[1rem]">
                   <img
                     src={data.icon}
@@ -41,7 +44,10 @@ const Service = ({ data }) => {
             </Fragment>
           ) : (
             <Fragment>
-              <div className="flex px-[15px] flex-col content-center">
+              <div
+                id={data.title}
+                className="flex px-[15px] flex-col content-center"
+              >
                 <figure className="mb-6">
                   <img
                     src={data.photo}

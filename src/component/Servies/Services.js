@@ -1,4 +1,5 @@
 import React from "react";
+import * as Scroll from "react-scroll";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -21,6 +22,7 @@ const Services = () => {
     let title = element.title;
     naxaServicesTitle.push(title);
   });
+
   return (
     <Layout>
       <section className="banner service-banner md-banner xxl: h-[520px] bg-heroBackground bg-no-repeat bg-contain	bg-right bg-[#fff] relative">
@@ -45,16 +47,30 @@ const Services = () => {
           </div>
         </div>
         <div className="w-full absolute flex justify-center bottom-[-30px]">
-          <div className=" max-w-[90%] flex justify-between border shadow-lg bg-white gap-2 p-1">
-            {naxaServicesTitle.map((element) => {
-              return <div className="w-[13%] self-center">{element}</div>;
+          <div className=" max-w-[90%] flex justify-between z-50 shadow-xl bg-white gap-2 p-1">
+            {naxaServicesTitle.map((element, id) => {
+              return (
+                <Scroll.Link
+                  className="w-[13%] self-center cursor-pointer"
+                  to={element}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={id < 2 ? 800 : id > 1 && id < 5 ? 1800 : 2500}
+                  isDynamic={true}
+                >
+                  {element}
+                </Scroll.Link>
+              );
             })}
           </div>
         </div>
       </section>
-      {naxaServices.map((element) => {
-        return <Service data={element} key={element.id} />;
-      })}
+      <div className="pb-16">
+        {naxaServices.map((element) => {
+          return <Service data={element} key={element.id} />;
+        })}
+      </div>
     </Layout>
   );
 };
